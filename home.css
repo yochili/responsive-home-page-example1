@@ -1,0 +1,115 @@
+.sous-article{
+    width: 50%;
+    
+}
+
+.image-1{
+    width: 100%;
+    transition: transform 1s;
+    animation: slide-down 1.5s;
+}
+
+.image-1:hover{
+    transform: scale(1.04) rotate(1deg);
+    box-shadow: 0 0 30px rgb(100, 100, 255);
+}
+
+article{
+    padding: 50px;
+}
+
+.article-1{
+    min-height: 100vh;
+    background-color: rgb(235, 235, 255);
+}
+
+article div{
+    padding: 30px;
+}
+
+.qui-somme-nous, .objectifs{
+    min-height: 50vh;
+    position: sticky;
+    top: 25vh;
+}
+
+.bg-blackgray{
+    background-color: #323232;
+}
+
+.objectifs{
+    z-index: 1;
+}
+
+.nos-services{
+    flex-wrap: wrap;
+}
+
+.nos-services .card{
+    width: calc(100% * 1 / 2.2)
+
+}
+
+.card:hover{
+    box-shadow: 0px 0px 20px rgb(100, 100, 255);
+}
+
+footer{
+    min-height: 30vh;
+    margin-top: 200px;
+}
+
+@keyframes slide-left {
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slogan{
+    animation: slide-left 1.5s;
+}
+
+.introduction{
+    animation: slide-right 1.5s;
+}
+
+@media (max-width: 992px) {
+    .nos-services .card{
+        width: 100%
+    }
+
+    .sous-article{
+        width: 90%; 
+    }
+
+    .article-1{
+        flex-direction: column;
+    }
+}
